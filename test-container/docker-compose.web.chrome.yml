@@ -1,0 +1,13 @@
+version: "3"
+services:
+  pytest-runner:
+    build:
+      context: web
+      dockerfile: web
+    entrypoint: 'pytest -m "regression" --browser=chrome --host=localhost --port=4444'
+
+  chrome-standalone:
+    image: 'selenium/standalone-chrome:latest'
+    shm_size: 2gb
+    ports:
+      - 7900:7900

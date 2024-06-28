@@ -1,6 +1,5 @@
-import allure
 import pytest
-from test.resource.pom_android.home_page import HomePage
+from test.utility.mobile.resource.pom_android.home_page import HomePage
 from appium.webdriver.common.appiumby import AppiumBy
 
 @pytest.mark.mobile

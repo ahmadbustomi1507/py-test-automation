@@ -4,7 +4,7 @@ from pydantic import ValidationError
 
 from test.utility import api_builder
 from test.utility import url
-from test.resource.dto.dto_User import  *
+from test.utility.mobile.resource.dto import  *
 
 @pytest.mark.api
 def test_api_A_sample_1(log_stream):

@@ -9,7 +9,8 @@ def test_sample_api(context,api):
     # request = context["request"]
     # print(f"request {request}")
     # response = context["response"]
-    build_api = RestApiBuilder(api["host"],api["port"],context)
-    build_api.send()
+    # print(f"this is the context {context}")
+    build_api = RestApiBuilder(host=api["host"],port=api["port"],context=context)
     print(build_api.get_data())
+    # build_api.send()
 

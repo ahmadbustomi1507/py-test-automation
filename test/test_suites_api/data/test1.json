@@ -1,14 +1,33 @@
 {
   "description": "This is test 1",
+  "method": "POST",
+  "endpoint": "/api/v1/login",
   "request": {
-    "method": "GET",
-    "endpoint": "/api/v1/login",
-    "header": "this is a header",
-    "payload": "this is a payload",
-    "queryparam": "this is a query param",
-    "path": "this is path"
+    "header": {
+        "Content-Type": "application/json",
+        "Accept": "*/*",
+        "Authorization": "Bearer 123612736217216"
+    },
+    "payload":{
+      "name": "ahmad bustomi",
+      "position":"QA engineer"
+    } ,
+    "queryparam": {
+      "table": "sampleTable"
+    },
+    "path": "/examplePath"
   },
-  "response": "this is a response"
+  "response": {
+    "status": 201,
+    "header": {
+        "Content-Type": "application/json",
+        "Accept": "*/*"
+    },
+    "body": {
+        "code": 123456,
+        "message": "successfully adding a new record"
+    }
+  }
 }
 
 
